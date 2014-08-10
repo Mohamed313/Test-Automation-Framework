@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Facebook Social App" parallel="tests">
+    <parameter name="url" value="http://facebook.com"/>
+
+
+    <test  name= "Facebook Features">
+        <classes>
+            <class name="fbhome.FBHome"/>
+            <!--<class name=""/>-->
+        </classes>
+
+    </test>
+
+
+</suite>

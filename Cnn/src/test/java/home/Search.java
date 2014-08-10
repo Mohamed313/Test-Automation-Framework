@@ -16,7 +16,7 @@ public class Search extends CommonApi {
 
     @Test
     public void searchBox()throws InterruptedException{
-        type("#hdr-search-box", "politics");
+        typeByCss("#hdr-search-box", "politics");
         clickByXpath(".//*[@id='hdr-search']/form/div/div[2]/input");
         sleep(3);
     }
