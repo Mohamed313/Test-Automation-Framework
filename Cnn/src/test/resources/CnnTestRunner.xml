@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cnn news media company" parallel="tests">
+    <test  name= "Cnn Navigation tab">
+        <classes>
+            <class name="home.Search"/>
+            <class name="home.NavigationTab"/>
+        </classes>
+
+    </test>
+
+
+</suite>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

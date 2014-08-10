@@ -11,6 +11,9 @@
     <modules>
         <module>Generic</module>
         <module>Cnn</module>
+        <module>Facebook</module>
+        <module>Amazon</module>
+        <module>BOA</module>
     </modules>
 
     <dependencyManagement>

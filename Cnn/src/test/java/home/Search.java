@@ -15,7 +15,9 @@ import org.testng.annotations.Test;
 public class Search extends CommonApi {
 
     @Test
-    public void searchBox(){
-        driver.findElement(By.cssSelector("#hdr-search-box")).sendKeys("politics", Keys.ENTER);
+    public void searchBox()throws InterruptedException{
+        type("#hdr-search-box", "politics");
+        clickByXpath(".//*[@id='hdr-search']/form/div/div[2]/input");
+        sleep(3);
     }
 }

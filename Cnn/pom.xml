@@ -35,11 +35,18 @@
                 <version>2.17</version>
                 <configuration>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                        <suiteXmlFiles>
+                            <suitXmlFile>target/test-classes/${CnnAppRunner}</suitXmlFile>
+                        </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
+    <properties>
+        <CnnAppRunner>CnnTestRunner.xml</CnnAppRunner>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 
 </project>
