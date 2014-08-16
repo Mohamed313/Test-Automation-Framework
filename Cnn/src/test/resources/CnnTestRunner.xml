@@ -2,15 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Cnn news media company" parallel="tests">
     <parameter name="url" value="http://www.cnn.com"/>
+    <parameter name="useSauceLabs" value="false"/>
+    <parameter name="OS" value="Windows XP"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="31"/>
+    <parameter name="userName" value="rahmanww"/>
+    <parameter name="key" value="e45ab198-cbcb-4f8f-89b9-639b0894e0bf"/>
+
     <test  name= "Cnn Navigation tab">
         <classes>
             <class name="home.Search"/>
             <class name="home.NavigationTab"/>
         </classes>
-
     </test>
-
-
 </suite>
 
 
