@@ -13,6 +13,7 @@
         <classes>
             <class name="home.Search"/>
             <class name="home.NavigationTab"/>
+            <class name="home.ReadExcel"/>
         </classes>
     </test>
 </suite>
