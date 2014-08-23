@@ -14,7 +14,7 @@
             <!--<class name="home.Search"/>-->
             <!--<class name="home.NavigationTab"/>-->
             <!--<class name="home.ReadExcel"/>-->
-            <class name="home.TvPrograms"/>
+            <!--<class name="home.TvPrograms"/>-->
         </classes>
     </test>
 </suite>

@@ -12,7 +12,7 @@
 
     <test  name= "Facebook Features">
         <classes>
-            <class name="fbhome.FBHome"/>
+            <!--<class name="fbhome.FBHome"/>-->
             <!--<class name=""/>-->
         </classes>
 
