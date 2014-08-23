@@ -10,6 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -111,6 +112,10 @@ public class CommonApi {
     }
 
     //get web elements
+    public WebElement getWebElement(String locator){
+        WebElement element = driver.findElement(By.cssSelector(locator));
+        return element;
+    }
     public List<WebElement> getWebElements(String locator){
         List<WebElement> elementList = new ArrayList<WebElement>();
         elementList = driver.findElements(By.cssSelector(locator));
@@ -172,6 +177,11 @@ public class CommonApi {
     public void waitUntilSelectAble(By locator){
         WebDriverWait wait = new WebDriverWait(driver,10);
         boolean element = wait.until(ExpectedConditions.elementToBeSelected(locator));
+    }
+    //Select menu Items
+    public void selectElementByOption(WebElement element, String value){
+        Select select = new Select(element);
+        select.selectByVisibleText(value);
     }
 
 
