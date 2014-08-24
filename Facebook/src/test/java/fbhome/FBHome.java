@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
  */
 public class FBHome extends CommonApi {
 
-   // @Test
+    @Test
     public void signIn()throws InterruptedException{
         typeByCss("#email", "magnumopium@yahoo.com");
         typeByCss("#pass", "selenium");

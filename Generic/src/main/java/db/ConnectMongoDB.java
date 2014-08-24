@@ -23,6 +23,12 @@ public class ConnectMongoDB {
         String pathSelenium  = "C:\\Users\\rrt\\IdeaProjects\\Test-Automation-Framework\\Generic\\data.xml";
         String pathQtp = "C:\\Users\\rrt\\IdeaProjects\\Test-Automation-Framework\\Generic\\qtp.xml";
         String tag = "id";
+        Map<String,Object> listMap = new HashMap<String,Object>();
+        listMap.put("Life","Space");
+        listMap.put("Water","Mars need water");
+        listMap.put("Electron","Positive charge");
+
+        /* read from Excel file then store into DB
         Map<String, List<Student>> map = new LinkedHashMap<String, List<Student>>();
         List<Student> listSelenium = new ArrayList<Student>();
         List<Student> listQtp = new ArrayList<Student>();
@@ -31,7 +37,7 @@ public class ConnectMongoDB {
         listQtp = reader.parseData(tag,pathQtp);
         map.put("Selenium", listSelenium);
         map.put("QTP", listQtp);
-
+        */
         //Data Base start here
         MongoClient mc = new MongoClient();
         DB db = mc.getDB("myDB");
@@ -42,13 +48,16 @@ public class ConnectMongoDB {
 
         DBCollection collection = db.getCollection("testCollection");
         BasicDBList doc = new BasicDBList();
-
-        doc.putAll(map);
-        collection.insert(doc);
+        BasicDBObject docs = new BasicDBObject();
+        docs.putAll(listMap);
+        collection.insert(docs);
         //search to find data
-        DBObject dbObject = collection.findOne();
-        System.out.println(dbObject);
-
+        BasicDBObject search = new BasicDBObject();
+        search.put("Life","Space");
+        DBCursor cursor = collection.find(search);
+        while(cursor.hasNext()){
+            System.out.println(cursor.next());
+        }
     }
 
 

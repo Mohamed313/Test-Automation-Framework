@@ -19,8 +19,8 @@ public class TvPrograms extends CommonApi {
     public void dropDownMenuTvProgram(){
       // List<WebElement> list = getWebElements(".tvPrograms select option");
        // WebElement element = getWebElement(".tvPrograms>select");
-        WebElement element = getWebElement(".cnn_tsbnav.cnn_pmtvmodddown select");
-        List<String> listOfMenuText = getTextList(".cnn_tsbnav.cnn_pmtvmodddown select option");
+        WebElement element = getWebElement(".tvPrograms>select option");
+        List<String> listOfMenuText = getTextList(".tvPrograms>select option");
         for(int i=0; i<listOfMenuText.size(); i++){
             if(i==1||i==3){
                 continue;
@@ -29,7 +29,7 @@ public class TvPrograms extends CommonApi {
                 selectElementByOption(element,listOfMenuText.get(i));
             }
             navigateBack();
-            element = getWebElement(".cnn_tsbnav.cnn_pmtvmodddown select");
+            element = getWebElement(".tvPrograms>select option");
         }
     }
 }

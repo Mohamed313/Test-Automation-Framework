@@ -71,18 +71,35 @@
         <profile>
             <id>all</id>
             <modules>
-                <module>Cnn</module>
-                <module>Generic</module>
+                    <module>Generic</module>
+                    <module>Cnn</module>
+                    <module>Facebook</module>
+                    <module>Amazon</module>
+                    <module>BOA</module>
             </modules>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
         <profile>
+            <id>facebook-app</id>
+            <modules>
+                <module>Generic</module>
+                <module>Facebook</module>
+            </modules>
+        </profile>
+        <profile>
             <id>cnn-app</id>
             <modules>
                 <module>Generic</module>
-                <module>cnn</module>
+                <module>Cnn</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>amazon-app</id>
+            <modules>
+                <module>Generic</module>
+                <module>Amazon</module>
             </modules>
         </profile>
     </profiles>
