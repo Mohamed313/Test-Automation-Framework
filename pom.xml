@@ -11,9 +11,8 @@
     <modules>
         <module>Generic</module>
         <module>Cnn</module>
-        <module>Facebook</module>
+         <module>MetLife</module>
         <module>Amazon</module>
-        <module>BOA</module>
     </modules>
 
     <dependencyManagement>
@@ -73,21 +72,14 @@
             <modules>
                     <module>Generic</module>
                     <module>Cnn</module>
-                    <module>Facebook</module>
-                    <module>Amazon</module>
-                    <module>BOA</module>
+                    <module>MetLife</module>
             </modules>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+
         </profile>
-        <profile>
-            <id>facebook-app</id>
-            <modules>
-                <module>Generic</module>
-                <module>Facebook</module>
-            </modules>
-        </profile>
+
         <profile>
             <id>cnn-app</id>
             <modules>
@@ -95,13 +87,23 @@
                 <module>Cnn</module>
             </modules>
         </profile>
+
         <profile>
-            <id>amazon-app</id>
+            <id>MetLife-app</id>
+            <modules>
+                <module>Generic</module>
+                <module>MetLife</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>Amazon-app</id>
             <modules>
                 <module>Generic</module>
                 <module>Amazon</module>
             </modules>
         </profile>
+
     </profiles>
 
 
